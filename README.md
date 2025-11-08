@@ -24,7 +24,7 @@ This is the source code for my personal portfolio website, designed to showcase 
 ## 📁 Project Structure
 
 The repository follows a standard frontend structure:
-
+```
 portfolio-site/
 ├── index.html          # Main HTML file containing the content and structure
 ├── css/
@@ -36,6 +36,7 @@ portfolio-site/
 │   ├── pic.png         # Developer profile photo
 │   └── project-X.jpg   # Screenshots/thumbnails for the projects section
 └── resume.pdf          # The downloadable version of the resume
+```
 
 ## 💻 Getting Started
 
