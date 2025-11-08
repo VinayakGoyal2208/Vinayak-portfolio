@@ -2,7 +2,7 @@
 
 This is the source code for my personal portfolio website, designed to showcase my skills, projects, and educational background. It features a modern, dark-themed UI, smooth scrolling, and scroll-reveal animations for an engaging user experience.
 
-🔗 **Live Demo:** [Click Here](https://vinayakgoyal2208.github.io/Vinayak-s-Portfolio/)
+🔗 **Live Demo:** [Click Here](https://vinayakgoyal2208.github.io/Vinayak-Portfolio/)
 
 ## ✨ Features
 
