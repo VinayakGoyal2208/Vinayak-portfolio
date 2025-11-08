@@ -25,17 +25,17 @@ This is the source code for my personal portfolio website, designed to showcase 
 
 The repository follows a standard frontend structure:
 
-portfolio-site/ 
-├── index.html # Main structure and content 
-├── css/ 
-│   └── styles.css # All styling and design 
-├── js/ 
-│   └── scripts.js # JavaScript for interactivity (menu, animations, contact form) 
-├── img/ 
-│   ├── logo.png # Logo image 
-│   ├── pic.png # Profile photo 
-│   └── project-X.jpg # Project screenshots 
-└── resume.pdf # Link to download the resume
+portfolio-site/
+├── index.html          # Main HTML file containing the content and structure
+├── css/
+│   └── styles.css      # All custom CSS rules and styling
+├── js/
+│   └── scripts.js      # JavaScript for navigation, scroll animations, and form handling
+├── img/
+│   ├── logo.png        # Site logo
+│   ├── pic.png         # Developer profile photo
+│   └── project-X.jpg   # Screenshots/thumbnails for the projects section
+└── resume.pdf          # The downloadable version of the resume
 
 ## 💻 Getting Started
 
