@@ -28,18 +28,13 @@ The repository follows a standard frontend structure:
 portfolio-site/ 
 ├── index.html # Main structure and content 
 ├── css/ 
-│ 
-└── styles.css # All styling and design 
+│   └── styles.css # All styling and design 
 ├── js/ 
-│ 
-└── scripts.js # JavaScript for interactivity (menu, animations, contact form) 
+│   └── scripts.js # JavaScript for interactivity (menu, animations, contact form) 
 ├── img/ 
-│ 
-├── logo.png # Logo image 
-│ 
-├── pic.png # Profile photo 
-│ 
-└── project-X.jpg # Project screenshots 
+│   ├── logo.png # Logo image 
+│   ├── pic.png # Profile photo 
+│   └── project-X.jpg # Project screenshots 
 └── resume.pdf # Link to download the resume
 
 ## 💻 Getting Started
