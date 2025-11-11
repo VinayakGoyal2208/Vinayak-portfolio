@@ -67,4 +67,5 @@ To personalize this portfolio, you will need to update the following files:
 * **`js/scripts.js`**: Update the `mailto` address in the contact form handler: `mailto:vinayakgoyal2208@gmail.com`.
 * **`img/` folder**: Replace `pic.png`, `logo.png`, and the project screenshots.
 
-<img width="1910" height="922" alt="image" src="https://github.com/user-attachments/assets/33222fd4-ed02-49ff-95d4-5d9eef6e09d7" />
+<img width="1814" height="882" alt="image" src="https://github.com/user-attachments/assets/b5cba9c9-ac05-4f19-bef0-08fbaaf3fb9e" />
+
