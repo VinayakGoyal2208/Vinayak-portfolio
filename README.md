@@ -1,71 +1,40 @@
-# 🚀 Vinayak Goyal — Personal Portfolio Website
-
-This is the source code for my personal portfolio website, designed to showcase my skills, projects, and educational background. It features a modern, dark-themed UI, smooth scrolling, and scroll-reveal animations for an engaging user experience.
-
-🔗 **Live Demo:** [Click Here](https://vinayakgoyal2208.github.io/Vinayak-portfolio/)
-
-## ✨ Features
-
-* **Modern Design:** Clean, dark-themed, and responsive layout built with native HTML and CSS.
-* **Smooth Navigation:** Uses CSS `scroll-behavior: smooth` and JavaScript for active link highlighting.
-* **Scroll Animations:** Elements fade and slide into view as you scroll using the `IntersectionObserver` API.
-* **Dynamic Skill Bars:** Visual skill bars animate their percentage upon being revealed.
-* **No Backend Contact Form:** The contact form uses a `mailto:` link to easily send me an email directly from the browser.
-* **Optimized Performance:** Built with minimal external dependencies (only Font Awesome and Google Fonts).
-
-## 🛠️ Technology Stack
-
-| Category | Technologies Used |
-| :--- | :--- |
-| **Markup & Styling** | HTML5, CSS3 (with CSS Variables for easy theming) |
-| **Interactivity** | Vanilla JavaScript (ES6+) |
-| **Tools & Libraries** | Font Awesome (for icons), Google Fonts (Inter) |
-
-## 📁 Project Structure
-
-The repository follows a standard frontend structure:
-```
-portfolio-site/
-├── index.html          # Main HTML file containing the content and structure
-├── css/
-│   └── styles.css      # All custom CSS rules and styling
-├── js/
-│   └── scripts.js      # JavaScript for navigation, scroll animations, and form handling
-├── img/
-│   ├── logo.png        # Site logo
-│   ├── pic.png         # Developer profile photo
-│   └── project-X.jpg   # Screenshots/thumbnails for the projects section
-└── resume.pdf          # The downloadable version of the resume
-```
-
-## 💻 Getting Started
-
-### Prerequisites
-
-To run this project locally, you only need a web browser.
-
-### Installation and Setup
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/VinayakGoyal2208/your-repo-name.git](https://github.com/VinayakGoyal2208/your-repo-name.git)
-    cd your-repo-name
-    ```
-2.  **Open the file:**
-    Simply open the `index.html` file in your preferred web browser.
-    ```bash
-    open index.html  # For macOS
-    start index.html # For Windows
-    ```
-
-## ✍️ Customization
-
-To personalize this portfolio, you will need to update the following files:
-
-* **`index.html`**: Update all text content (e.g., name, lead paragraph, project details, resume items).
-* **`styles.css`**: Modify the **CSS Variables** at the top (e.g., `--brand`, `--bg`) to change the color scheme.
-* **`js/scripts.js`**: Update the `mailto` address in the contact form handler: `mailto:vinayakgoyal2208@gmail.com`.
-* **`img/` folder**: Replace `pic.png`, `logo.png`, and the project screenshots.
-
-<img width="1814" height="882" alt="image" src="https://github.com/user-attachments/assets/b5cba9c9-ac05-4f19-bef0-08fbaaf3fb9e" />
-
+# Vinayak Goyal — Personal Portfolio Website
+![Vinayak Goyal Portfolio](assets/project3.jpg)
+A high-performance, motion-first developer portfolio website built with HTML5, CSS3, JavaScript (ES6+), and GSAP + ScrollTrigger. Designed with an editorial dark aesthetic, fluid typography, interactive canvas graphics, and zero scroll desync.
+Live Site: [https://vinayakgoyal2208.github.io/portfolio/](https://vinayakgoyal2208.github.io/portfolio/) *(Update with your active URL)*
+---
+## ✨ Key Features
+- **⚡ Native Scroll Performance (Zero Desync):** Driven strictly by native browser scrolling with GSAP ScrollTrigger for smooth, frame-perfect animations.
+- **🎨 Editorial Dark Glass Aesthetics:** Electric lime (`#c8f065`) & indigo (`#7c6aff`) accents set against an obsidian theme (`#050508`) with a subtle grain texture overlay.
+- **🌌 Interactive Hero Canvas:** Dynamic canvas background featuring floating glow orbs and an animated grid mesh.
+- **🧲 Magnetic CTAs & Custom Cursor:** Interactive buttons that track mouse movement with spring physics and an adaptive dual-ring custom cursor.
+- **🗂️ Interactive Work Showcase:** Filterable 9-project gallery with category tags (Internship, Fullstack, Personal) and hover overlays.
+- **📈 Animated Skill Bars & Timeline:** Scroll-triggered proficiency bar fills and a dual-color experience timeline.
+- **✉️ Working Contact Form:** Integrated AJAX contact form powered by FormSubmit that sends messages directly to `vinayakgoyal2208@gmail.com`.
+- **📱 Fully Responsive:** Adaptive mobile navigation drawer and responsive grids for seamless viewing across mobile, tablet, and desktop screens.
+---
+## 🛠️ Tech Stack
+- **Core:** HTML5, CSS3, Vanilla JavaScript (ES6+)
+- **Animation & Motion:** [GSAP 3.12.5](https://greensock.com/gsap/), [ScrollTrigger](https://greensock.com/scrolltrigger/)
+- **Typography:** [Syne](https://fonts.google.com/specimen/Syne), [Inter](https://fonts.google.com/specimen/Inter), [Fira Code](https://fonts.google.com/specimen/Fira+Code)
+- **Form Backend:** [FormSubmit AJAX API](https://formsubmit.co/)
+---
+## 📂 Project Structure
+   python -m http.server 8000
+   ```
+   Navigate to `http://localhost:8000`.
+---
+## 📬 Contact Form Configuration
+The contact form uses [FormSubmit](https://formsubmit.co/). 
+- Upon the **very first form submission** on a new deployment, FormSubmit sends a single confirmation link to `vinayakgoyal2208@gmail.com`.
+- Click **"Activate Form"** in that email once, and all future visitor submissions will automatically land in your inbox.
+---
+## 👤 Author
+**Vinayak Goyal**
+- **Role:** Frontend & Web Developer | MCA Scholar
+- **GitHub:** [@VinayakGoyal2208](https://github.com/VinayakGoyal2208)
+- **LinkedIn:** [Vinayak Goyal](https://www.linkedin.com/in/vinayak-goyal-888814221/)
+- **Email:** vinayakgoyal2208@gmail.com
+---
+## 📄 License
+This project is open source under the [MIT License](LICENSE).
