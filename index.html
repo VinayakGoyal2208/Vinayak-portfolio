@@ -1,367 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vinayak Goyal — Portfolio</title>
-  <meta name="description"
-    content="Portfolio website featuring about, skills, projects, resume, and contact sections with smooth scrolling animations." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vinayak Goyal — Frontend & Web Developer crafting high-end interactive interfaces, fullstack apps, and animated UI systems." />
+  <meta name="theme-color" content="#050508" />
+  <title>Vinayak Goyal — Web Developer</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="#home" class="brand">
-        <img src="img/logo.png" alt="Vinayak Goyal Logo" class="logo"
-          style="height:2rem;width:auto;vertical-align:middle;">
-        <span>Vinayak Goyal</span>
-      </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
-      <div class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-bar"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-layer"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">VG<span class="logo-dot">.</span></a>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#experience">Journey</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <header id="home">
-    <div class="container hero">
-      <div>
-        <span class="chip reveal"><i class="fa-solid fa-sparkles"></i> Open to Opportunities</span>
-        <h1 class="reveal" style="transition-delay:.08s">Hi, I'm
-          <span
-            style="background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">Vinayak
-            Goyal</span> — Web Developer
-        </h1>
-        <p class="lead reveal" style="transition-delay:.16s">I build fast, accessible, and delightful web experiences
-          using HTML, CSS, and JavaScript. Scroll to see my work, skills, and how to reach me.</p>
-        <div class="cta reveal" style="transition-delay:.24s">
-          <a class="btn" href="#projects"><i class="fa-solid fa-rocket"></i> View Projects</a>
-          <a class="btn secondary" href="resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Download
-            Resume</a>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#experience">Journey</a></li>
+      <li><a href="#contact">Hire Me</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <span class="live-dot"></span>
+        <span>Available for New Roles</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line-wrap"><span class="line-inner">Vinayak</span></span>
+        <span class="line-wrap"><span class="line-inner hero-outline">Goyal</span></span>
+      </h1>
+
+      <div class="hero-meta">
+        <div class="hero-desc">
+          <p class="typewriter-wrap">
+            <span id="typewriter"></span><span class="cursor-blink">|</span>
+          </p>
+          <p class="hero-sub">Frontend & Web Developer · MCA Scholar · Open to Remote</p>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-main magnetic">
+            <span>View Work</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+          <a href="#contact" class="btn-ghost magnetic">
+            <span>Get In Touch</span>
+          </a>
         </div>
       </div>
-      <div class="reveal" style="transition-delay:.2s">
-        <div class="portrait" aria-label="Profile photo"></div>
+
+      <div class="hero-stats">
+        <div class="stat-chip">
+          <strong>6+</strong>
+          <span>Live Apps</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-chip">
+          <strong>3</strong>
+          <span>Internships</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-chip">
+          <strong>MCA</strong>
+          <span>Scholar</span>
+        </div>
       </div>
     </div>
-  </header>
 
+    <div class="hero-scroll-hint">
+      <div class="scroll-wheel">
+        <div class="scroll-thumb"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ MARQUEE ═══════════════════════════ -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <span>HTML5</span><span class="sep">✦</span>
+        <span>CSS3</span><span class="sep">✦</span>
+        <span>JavaScript</span><span class="sep">✦</span>
+        <span>React</span><span class="sep">✦</span>
+        <span>Tailwind CSS</span><span class="sep">✦</span>
+        <span>Fullstack</span><span class="sep">✦</span>
+        <span>Git & GitHub</span><span class="sep">✦</span>
+        <span>REST APIs</span><span class="sep">✦</span>
+        <span>Node.js</span><span class="sep">✦</span>
+        <span>AI Integration</span><span class="sep">✦</span>
+        <span>Netlify</span><span class="sep">✦</span>
+        <span>Responsive Design</span><span class="sep">✦</span>
+        <!-- Duplicate for seamless loop -->
+        <span>HTML5</span><span class="sep">✦</span>
+        <span>CSS3</span><span class="sep">✦</span>
+        <span>JavaScript</span><span class="sep">✦</span>
+        <span>React</span><span class="sep">✦</span>
+        <span>Tailwind CSS</span><span class="sep">✦</span>
+        <span>Fullstack</span><span class="sep">✦</span>
+        <span>Git & GitHub</span><span class="sep">✦</span>
+        <span>REST APIs</span><span class="sep">✦</span>
+        <span>Node.js</span><span class="sep">✦</span>
+        <span>AI Integration</span><span class="sep">✦</span>
+        <span>Netlify</span><span class="sep">✦</span>
+        <span>Responsive Design</span><span class="sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
   <section id="about">
-    <div class="container">
-      <div class="section-title reveal"><span class="chip"><i class="fa-solid fa-user"></i> About</span>
-        <h2>About Me</h2>
-      </div>
-      <div class="about">
-        <div class="card reveal">
-          <h3>Summary</h3>
-          <p>I am a Web Developer and current MCA student at Sikkim Manipal University, dedicated to building fast,
-            accessible, and high-performance web applications. Completed working as a Web Developer Intern at NovaNectar
-            Services, I specialize in frontend technologies like HTML, Tailwind CSS, JavaScript, and React, while
-            actively expanding my expertise into full-stack development with Node.js and MongoDB</p>
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="section-eyebrow reveal-fade">01 — About Me</div>
+          <h2 class="section-heading reveal-up">
+            Building the Web<br />
+            <em>one pixel at a time</em>
+          </h2>
+          <div class="about-text reveal-fade">
+            <p>
+              I'm a <strong>Frontend & Web Developer</strong> based in India, passionate about crafting fast, beautiful, and interactive digital experiences. With internships at <strong>NovaNectar Services</strong>, <strong>Unified Mentor</strong>, and <strong>Codsoft</strong>, I've shipped real products that real users love.
+            </p>
+            <p>
+              Currently pursuing my <strong>MCA at Sikkim Manipal University</strong> (BCA from Graphic Era Hill University), I blend deep CS fundamentals with modern frontend craft — motion design, design systems, fullstack architecture, and everything in between.
+            </p>
+          </div>
+          <div class="about-links reveal-fade">
+            <a href="https://github.com/VinayakGoyal2208" target="_blank" class="text-link">
+              GitHub Profile →
+            </a>
+            <a href="https://www.linkedin.com/in/vinayak-goyal-888814221/" target="_blank" class="text-link">
+              LinkedIn →
+            </a>
+          </div>
         </div>
-        <div class="card reveal" style="transition-delay:.08s">
-          <h3>Quick Facts</h3>
-          <div class="about-list">
-            <span class="chip"><i class="fa-solid fa-location-dot"></i> Sitarganj, Uttarakhand</span>
-            <span class="chip"><i class="fa-solid fa-graduation-cap"></i> MCA — Sikkim Manipal University</span>
-            <span class="chip"><i class="fa-solid fa-envelope"></i> <a
-                href="mailto:vinayakgoyal2208@gmail.com">vinayakgoyal2208@gmail.com</a></span>
-            <span class="chip"><i class="fa-brands fa-github"></i> <a href="https://github.com/VinayakGoyal2208"
-                target="_blank" rel="noopener">github.com/VinayakGoyal2208</a></span>
+
+        <div class="about-right">
+          <div class="about-card-stack">
+            <div class="acard reveal-scale" style="--delay:0s">
+              <div class="acard-num">06+</div>
+              <div class="acard-label">Major Live Applications Deployed</div>
+            </div>
+            <div class="acard reveal-scale" style="--delay:0.1s">
+              <div class="acard-num">03</div>
+              <div class="acard-label">Development Internships Completed</div>
+            </div>
+            <div class="acard acard-wide reveal-scale" style="--delay:0.2s">
+              <div class="acard-edu">
+                <div>
+                  <div class="acard-label">Master of Computer Applications</div>
+                  <div class="acard-sub">Sikkim Manipal University · 2024–2026</div>
+                </div>
+                <div class="acard-badge">MCA</div>
+              </div>
+            </div>
+            <div class="acard acard-wide reveal-scale" style="--delay:0.3s">
+              <div class="acard-edu">
+                <div>
+                  <div class="acard-label">Bachelor of Computer Applications</div>
+                  <div class="acard-sub">Graphic Era Hill University · 2021–2024</div>
+                </div>
+                <div class="acard-badge">BCA</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
   <section id="skills">
-    <div class="container">
-      <div class="section-title reveal"><span class="chip"><i class="fa-solid fa-code"></i> Skills</span>
-        <h2>Core Skills</h2>
-      </div>
-      <p class="section-sub reveal">A snapshot of tools and technologies I use regularly.</p>
-      <div class="skills-grid">
-        <div class="skill reveal"><strong>HTML</strong>
-          <div class="bar"><span data-skill="80"></span></div>
-        </div>
-        <div class="skill reveal" style="transition-delay:.05s"><strong>Tailwind CSS</strong>
-          <div class="bar"><span data-skill="80"></span></div>
-        </div>
-        <div class="skill reveal" style="transition-delay:.1s"><strong>JavaScript</strong>
-          <div class="bar"><span data-skill="50"></span></div>
-        </div>
-        <div class="skill reveal" style="transition-delay:.15s"><strong>React JS</strong>
-          <div class="bar"><span data-skill="40"></span></div>
-        </div>
-        <div class="skill reveal" style="transition-delay:.2s"><strong>Git & GitHub</strong>
-          <div class="bar"><span data-skill="80"></span></div>
-        </div>
-        <div class="skill reveal" style="transition-delay:.2s"><strong>Node JS</strong>
-          <div class="bar"><span data-skill="20"></span></div>
-        </div>
-        <div class="skill reveal" style="transition-delay:.2s"><strong>Mongo DB</strong>
-          <div class="bar"><span data-skill="40"></span></div>
+    <div class="section-inner">
+      <div class="section-eyebrow reveal-fade">02 — Skills</div>
+      <h2 class="section-heading reveal-up">What I Build With</h2>
+
+      <div class="skills-container">
+        <div class="skill-row">
+          <div class="skill-block reveal-left" style="--delay:0s">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Frontend & UI</h3>
+            <ul>
+              <li><span>HTML5</span><div class="bar"><div class="bar-fill" data-w="95"></div></div></li>
+              <li><span>CSS3 & Tailwind</span><div class="bar"><div class="bar-fill" data-w="92"></div></div></li>
+              <li><span>JavaScript ES6+</span><div class="bar"><div class="bar-fill" data-w="88"></div></div></li>
+              <li><span>React</span><div class="bar"><div class="bar-fill" data-w="82"></div></div></li>
+            </ul>
+          </div>
+
+          <div class="skill-block reveal-left" style="--delay:0.15s">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Fullstack & Backend</h3>
+            <ul>
+              <li><span>Node.js & REST APIs</span><div class="bar"><div class="bar-fill" data-w="75"></div></div></li>
+              <li><span>SQL & NoSQL DBs</span><div class="bar"><div class="bar-fill" data-w="72"></div></div></li>
+              <li><span>Fullstack Architecture</span><div class="bar"><div class="bar-fill" data-w="78"></div></div></li>
+              <li><span>LocalStorage & State</span><div class="bar"><div class="bar-fill" data-w="88"></div></div></li>
+            </ul>
+          </div>
+
+          <div class="skill-block reveal-left" style="--delay:0.3s">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <h3>Tools & DevOps</h3>
+            <ul>
+              <li><span>Git & GitHub</span><div class="bar"><div class="bar-fill" data-w="90"></div></div></li>
+              <li><span>Netlify & GitHub Pages</span><div class="bar"><div class="bar-fill" data-w="85"></div></div></li>
+              <li><span>AI Tools & Agents</span><div class="bar"><div class="bar-fill" data-w="80"></div></div></li>
+              <li><span>Motion & Animation</span><div class="bar"><div class="bar-fill" data-w="85"></div></div></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
   <section id="projects">
-    <div class="container">
-      <div class="section-title reveal"><span class="chip"><i class="fa-solid fa-rocket"></i> Projects</span>
-        <h2>Project Showcase</h2>
+    <div class="section-inner">
+      <div class="section-eyebrow reveal-fade">03 — Selected Work</div>
+      <h2 class="section-heading reveal-up">Featured Projects</h2>
+
+      <div class="filter-bar reveal-fade">
+        <button class="fpill active" data-filter="all">All</button>
+        <button class="fpill" data-filter="internship">Internship</button>
+        <button class="fpill" data-filter="fullstack">Full Stack</button>
+        <button class="fpill" data-filter="personal">Personal</button>
       </div>
-      <div class="projects-grid">
-        <article class="project reveal">
-          <div class="thumb" style="background-image:url('img/project-7.png')"></div>
-          <div class="body">
-            <h3>EduStream Academy</h3>
-            <p>A comprehensive and responsive school management website designed to streamline institutional
-              communication. It features dedicated sections for academic programs, admissions, and campus news with a
-              modern, professional interface.</p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">Tailwind CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">React JS</span>
-            </div>
-            <div class="links">
-              <a class="btn secondary" href="https://school-website-4klr.onrender.com" target="_blank">Live
-                Demo</a>
-              <a class="btn" href="https://github.com/VinayakGoyal2208/School_website" target="_blank" rel="noopener"><i
-                  class="fa-brands fa-github"></i> Code</a>
+
+      <div class="proj-grid">
+
+        <div class="proj-card reveal-card" data-cat="internship">
+          <div class="proj-img-wrap">
+            <img src="assets/project1.jpg" alt="Novanector Website" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://vinayakgoyal2208.github.io/Novanector-Website/" target="_blank" rel="noopener">
+                  Live <svg viewBox="0 0 24 24" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </a>
+                <a href="https://github.com/VinayakGoyal2208/Novanector-Website" target="_blank" rel="noopener">GitHub</a>
+              </div>
             </div>
           </div>
-        </article>
-        <article class="project reveal">
-          <div class="thumb" style="background-image:url('img/project-8.png')"></div>
-          <div class="body">
-            <h3>PrintPulse Custom Studio</h3>
-            <p>An interactive e-commerce showcase for custom merchandise printing. This platform allows users to browse
-              personalized options for apparel and accessories, emphasizing high-quality UI design and responsive
-              layouts.</p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <div class="links">
-              <a class="btn secondary" href="https://logoipsum12.netlify.app/" target="_blank">Live
-                Demo</a>
-              <a class="btn" href="https://github.com/VinayakGoyal2208/Logoipsum" target="_blank" rel="noopener"><i
-                  class="fa-brands fa-github"></i> Code</a>
+          <div class="proj-body">
+            <div class="proj-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+            <h3>Novanector Official Website</h3>
+            <p>Official responsive web portal built during NovaNectar internship — modern navigation, fluid sections, optimized load times.</p>
+            <div class="proj-company">NovaNectar Services</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal-card" data-cat="internship fullstack">
+          <div class="proj-img-wrap">
+            <img src="assets/project2.jpg" alt="Soil Farming Agent" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://github.com/VinayakGoyal2208/Soil-farming-agent" target="_blank" rel="noopener">GitHub</a>
+              </div>
             </div>
           </div>
-        </article>
-        <article class="project reveal">
-          <div class="thumb" style="background-image:url('img/project-1.jpg')"></div>
-          <div class="body">
+          <div class="proj-body">
+            <div class="proj-tags"><span>Fullstack</span><span>AI</span><span>JavaScript</span><span>Database</span></div>
+            <h3>Soil Farming AI Agent</h3>
+            <p>Smart fullstack agriculture assistant analyzing soil metrics and providing actionable crop recommendations for farmers.</p>
+            <div class="proj-company">Unified Mentor</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal-card" data-cat="internship">
+          <div class="proj-img-wrap">
+            <img src="assets/project3.jpg" alt="LogoIpsum UI" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://logoipsum12.netlify.app/" target="_blank" rel="noopener">Live <svg viewBox="0 0 24 24" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+                <a href="https://github.com/VinayakGoyal2208/Logoipsum" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span>HTML5</span><span>Tailwind</span><span>Netlify</span></div>
+            <h3>LogoIpsum UI Web App</h3>
+            <p>Sleek branding showcase with pixel-perfect design, smooth interactions, deployed on Netlify.</p>
+            <div class="proj-company">NovaNectar Services</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal-card" data-cat="internship fullstack">
+          <div class="proj-img-wrap">
+            <img src="assets/project4.jpg" alt="Order Management" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://github.com/VinayakGoyal2208/order-management" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span>Fullstack</span><span>REST API</span><span>Database</span></div>
+            <h3>Order Management System</h3>
+            <p>Fullstack web app for processing orders, inventory tracking, status updates, and streamlined client transactions.</p>
+            <div class="proj-company">Unified Mentor</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal-card" data-cat="internship fullstack">
+          <div class="proj-img-wrap">
+            <img src="assets/project1.jpg" alt="Catering Management" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://github.com/VinayakGoyal2208/Catering-Management-System" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span>Fullstack</span><span>Node.js</span><span>SQL/NoSQL</span></div>
+            <h3>Catering Management System</h3>
+            <p>End-to-end portal for event catering — bookings, menu customization, client communication, and scheduling.</p>
+            <div class="proj-company">Unified Mentor</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal-card" data-cat="personal">
+          <div class="proj-img-wrap">
+            <img src="assets/project4.jpg" alt="Note Master" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://vinayakgoyal2208.github.io/note-master/" target="_blank" rel="noopener">Live <svg viewBox="0 0 24 24" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+                <a href="https://github.com/VinayakGoyal2208/note-master" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span>JavaScript</span><span>LocalStorage</span><span>CSS3</span></div>
             <h3>Note Master</h3>
-            <p>Web application for creating, managing notes with a user-friendly interface. It allows users to organize
-              their thoughts and ideas efficiently.</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
-                class="tag">JavaScript</span></div>
-            <div class="links">
-              <a class="btn secondary" href="https://vinayakgoyal2208.github.io/note-master/" target="_blank">Live
-                Demo</a>
-              <a class="btn" href="https://github.com/VinayakGoyal2208/note-master" target="_blank" rel="noopener"><i
-                  class="fa-brands fa-github"></i> Code</a>
-            </div>
+            <p>Feature-rich note-taking app with client-side persistence, category organization, and sleek dark UI.</p>
+            <div class="proj-company">Personal</div>
           </div>
-        </article>
+        </div>
 
-        <article class="project reveal" style="transition-delay:.1s">
-          <div class="thumb" style="background-image:url('img/project-2.jpeg')"></div>
-          <div class="body">
-            <h3>Calculator</h3>
-            <p>A simple and responsive calculator built using HTML, CSS, and JavaScript.
-              It supports basic arithmetic operations like addition, subtraction, multiplication, and division with a
-              clean user interface.</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
-                class="tag">JavaScript</span></div>
-            <div class="links">
-              <a class="btn secondary" href="https://vinayakgoyal2208.github.io/Calculator/" target="_blank">Live
-                Demo</a>
-              <a class="btn" href="https://github.com/VinayakGoyal2208/Calculator" target="_blank" rel="noopener"><i
-                  class="fa-brands fa-github"></i> Code</a>
+        <div class="proj-card reveal-card" data-cat="personal">
+          <div class="proj-img-wrap">
+            <img src="assets/project3.jpg" alt="Web Calculator" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://vinayakgoyal2208.github.io/Calculator/" target="_blank" rel="noopener">Live <svg viewBox="0 0 24 24" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+                <a href="https://github.com/VinayakGoyal2208/Calculator" target="_blank" rel="noopener">GitHub</a>
+              </div>
             </div>
           </div>
-        </article>
+          <div class="proj-body">
+            <div class="proj-tags"><span>JavaScript</span><span>DOM</span><span>CSS Flexbox</span></div>
+            <h3>Interactive Web Calculator</h3>
+            <p>Sleek calculator supporting arithmetic operations and keyboard event handling.</p>
+            <div class="proj-company">Personal</div>
+          </div>
+        </div>
 
-        <article class="project reveal" style="transition-delay:.1s">
-          <div class="thumb" style="background-image:url('img/project-3.png')"></div>
-          <div class="body">
-            <h3>To-Do List</h3>
-            <p>Task management app to add, edit, delete, search, and filter tasks. Includes progress tracking,
-              animations, and local storage support.</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
-                class="tag">JavaScript</span></div>
-            <div class="links">
-              <a class="btn secondary" href="https://vinayakgoyal2208.github.io/To-Do-List/" target="_blank">Live
-                Demo</a>
-              <a class="btn" href="https://github.com/VinayakGoyal2208/To-Do-List" target="_blank" rel="noopener"><i
-                  class="fa-brands fa-github"></i> Code</a>
+        <div class="proj-card reveal-card" data-cat="personal">
+          <div class="proj-img-wrap">
+            <img src="assets/project2.jpg" alt="To-Do List" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://vinayakgoyal2208.github.io/To-Do-List/" target="_blank" rel="noopener">Live <svg viewBox="0 0 24 24" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+                <a href="https://github.com/VinayakGoyal2208/To-Do-List" target="_blank" rel="noopener">GitHub</a>
+              </div>
             </div>
           </div>
-        </article>
+          <div class="proj-body">
+            <div class="proj-tags"><span>JavaScript</span><span>DOM Events</span><span>LocalStorage</span></div>
+            <h3>Task Management To-Do List</h3>
+            <p>Task tracking app with persistent browser storage and clean filtering UX.</p>
+            <div class="proj-company">Personal</div>
+          </div>
+        </div>
 
-        <article class="project reveal" style="transition-delay:.1s">
-          <div class="thumb" style="background-image:url('img/project-4.png')"></div>
-          <div class="body">
-            <h3>Stopwatch</h3>
-            <p>A modern stopwatch with start, pause, reset, and lap features. Designed to be responsive and simple for
-              both desktop and mobile.</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
-                class="tag">JavaScript</span></div>
-            <div class="links">
-              <a class="btn secondary" href="https://vinayakgoyal2208.github.io/Stopwatch/" target="_blank">Live
-                Demo</a>
-              <a class="btn" href="https://github.com/VinayakGoyal2208/Stopwatch" target="_blank" rel="noopener"><i
-                  class="fa-brands fa-github"></i> Code</a>
+        <div class="proj-card reveal-card" data-cat="internship fullstack">
+          <div class="proj-img-wrap">
+            <img src="assets/project2.jpg" alt="School Website" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://github.com/VinayakGoyal2208/School_website" target="_blank" rel="noopener">GitHub</a>
+              </div>
             </div>
           </div>
-        </article>
-
-        <article class="project reveal" style="transition-delay:.05s">
-          <div class="thumb" style="background-image:url('img/project-5.jpg')"></div>
-          <div class="body">
-            <h3>Steganography: Hiding Text in Image</h3>
-            <p>Desktop tool built for hiding the confidential text in the image using the LSB (Least Significant Bit)
-              technique. It allows users to securely embed messages within images.</p>
-            <div class="tags"><span class="tag">.NET Framework</span><span class="tag">C#</span><span class="tag">Visual
-                Studio</span></div>
-            <div class="links">
-              <a class="btn" href="https://github.com/VinayakGoyal2208/steganography-hiding-text-in-image"
-                target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
-            </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span>Fullstack</span><span>HTML/CSS</span><span>JavaScript</span></div>
+            <h3>School Management Website</h3>
+            <p>Comprehensive fullstack site for educational institutions — student data, events, and responsive admin.</p>
+            <div class="proj-company">NovaNectar Services</div>
           </div>
-        </article>
-
-        <article class="project reveal" style="transition-delay:.1s">
-          <div class="thumb" style="background-image:url('img/project-6.png')"></div>
-          <div class="body">
-            <h3>Attendance Management System (Face Recognition)</h3>
-            <p>Web application for managing attendance using face recognition technology. It captures and recognizes
-              faces to mark attendance in real-time.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span
-                class="tag">Firebase</span><span class="tag">Figma</span><span class="tag">VS Code</span></div>
-            <div class="links">
-              <a class="btn"
-                href="https://github.com/VinayakGoyal2208/face-recognition-based-attendance-system-in-RealTimeDatabase"
-                target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
-            </div>
-          </div>
-        </article>
+        </div>
 
       </div>
     </div>
   </section>
 
-  <section id="resume">
-    <div class="container">
-      <div class="section-title reveal"><span class="chip"><i class="fa-solid fa-file"></i> Resume</span>
-        <h2>Experience & Education</h2>
-      </div>
-      <div class="resume-grid">
-        <div class="resume-item reveal">
-          <h3>Web Development Intern — NovaNectar Services</h3>
-          <p><em>Feb 2026 – May 2026</em></p>
-          <ul>
-            <li>Developing responsive applications using HTML, Tailwind CSS, and JavaScript[cite: 1].</li>
-            <li>Utilizing Git and GitHub for version control and project deployment[cite: 1].</li>
-            <li>Expanding technical stack into React.js, MongoDB, and Node.js[cite: 1].</li>
-          </ul>
+  <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal-fade">04 — Journey</div>
+      <h2 class="section-heading reveal-up">Experience & Education</h2>
+
+      <div class="timeline">
+
+        <div class="t-item reveal-timeline">
+          <div class="t-connector">
+            <div class="t-dot work"></div>
+            <div class="t-line"></div>
+          </div>
+          <div class="t-content">
+            <div class="t-header">
+              <div>
+                <span class="t-date">Feb 2026 – May 2026</span>
+                <h3>Web Development Intern</h3>
+                <div class="t-company">NovaNectar Services</div>
+              </div>
+              <span class="t-badge">Work</span>
+            </div>
+            <p>Engineered high-performance client web portals — Novanector Website, School Website, Billing Software. Reduced initial page load latency by 35% through image optimization and CSS delivery improvements.</p>
+            <div class="t-skills"><span>HTML5/CSS3</span><span>JavaScript</span><span>Asset Optimization</span></div>
+          </div>
         </div>
 
-        <!-- Unified Mentor -->
-        <div class="resume-item reveal" style="transition-delay:.05s">
-          <h3>Front-End Developer — Unified Mentor</h3>
-          <p><em>Aug 2025 – Nov 2025</em></p>
-          <ul>
-            <li>Created interactive projects including a Tic-Tac-Toe game and calculator app[cite: 1].</li>
-            <li>Implemented clean UI components and smooth animations for enhanced UX[cite: 1].</li>
-            <li>Ensured cross-device compatibility and accessibility[cite: 1].</li>
-          </ul>
+        <div class="t-item reveal-timeline">
+          <div class="t-connector">
+            <div class="t-dot work"></div>
+            <div class="t-line"></div>
+          </div>
+          <div class="t-content">
+            <div class="t-header">
+              <div>
+                <span class="t-date">Aug 2025 – Nov 2025</span>
+                <h3>Front-End Developer Intern</h3>
+                <div class="t-company">Unified Mentor</div>
+              </div>
+              <span class="t-badge">Work</span>
+            </div>
+            <p>Built fullstack platforms — Order Management System, Catering Management, Soil Farming AI Agent. Integrated REST APIs and optimized state management for peak UI responsiveness.</p>
+            <div class="t-skills"><span>Fullstack</span><span>REST APIs</span><span>AI Integration</span></div>
+          </div>
         </div>
-        <div class="resume-item reveal">
-          <h3>MCA — Sikkim Manipal University</h3>
-          <p><em>Dec 2024 – Present</em></p>
+
+        <div class="t-item reveal-timeline">
+          <div class="t-connector">
+            <div class="t-dot edu"></div>
+            <div class="t-line"></div>
+          </div>
+          <div class="t-content">
+            <div class="t-header">
+              <div>
+                <span class="t-date">Dec 2024 – Sept 2026</span>
+                <h3>Master of Computer Applications (MCA)</h3>
+                <div class="t-company">Sikkim Manipal University</div>
+              </div>
+              <span class="t-badge edu">Education</span>
+            </div>
+            <p>Advanced study in software architecture, cloud computing, data structures, algorithms, and full-stack application design.</p>
+            <div class="t-skills"><span>Software Architecture</span><span>Cloud</span><span>Advanced DBMS</span></div>
+          </div>
         </div>
-        <div class="resume-item reveal" style="transition-delay:.05s">
-          <h3>BCA — Graphic Era Hill University</h3>
-          <p><em>Aug 2021 – Aug 2024</em></p>
-          <ul>
-            <li>Collaborated on multiple team projects</li>
-          </ul>
+
+        <div class="t-item reveal-timeline">
+          <div class="t-connector">
+            <div class="t-dot work"></div>
+            <div class="t-line"></div>
+          </div>
+          <div class="t-content">
+            <div class="t-header">
+              <div>
+                <span class="t-date">Sep 2024 – Oct 2024</span>
+                <h3>Web Development Intern</h3>
+                <div class="t-company">Codsoft</div>
+              </div>
+              <span class="t-badge">Work</span>
+            </div>
+            <p>Crafted interactive web utility tools and responsive CSS layouts delivering sub-second rendering and cross-browser compatibility.</p>
+            <div class="t-skills"><span>UI Design</span><span>JavaScript DOM</span><span>Responsive CSS</span></div>
+          </div>
         </div>
-        <div class="resume-item reveal" style="transition-delay:.1s">
-          <h3>Web Development Intern — Codsoft</h3>
-          <p><em>Sep 2024 – Oct 2024</em></p>
-          <ul>
-            <li>Designed portfolio and landing pages with intuitive UI[cite: 1].</li>
-            <li>Optimized performance by compressing assets and minimizing redundancy[cite: 1].</li>
-          </ul>
+
+        <div class="t-item reveal-timeline">
+          <div class="t-connector">
+            <div class="t-dot edu"></div>
+          </div>
+          <div class="t-content">
+            <div class="t-header">
+              <div>
+                <span class="t-date">Aug 2021 – Aug 2024</span>
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <div class="t-company">Graphic Era Hill University</div>
+              </div>
+              <span class="t-badge edu">Education</span>
+            </div>
+            <p>Foundational CS studies — OOP, web development, DBMS, data structures, and software development lifecycle principles.</p>
+            <div class="t-skills"><span>CS Core</span><span>OOP & C++</span><span>Web Fundamentals</span></div>
+          </div>
         </div>
-      </div>
-      <div class="resume-actions reveal" style="margin-top:1rem">
-        <a class="btn" href="resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
-        <a class="btn secondary" href="#contact"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+
       </div>
     </div>
   </section>
 
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
   <section id="contact">
-    <div class="container">
-      <div class="section-title reveal"><span class="chip"><i class="fa-solid fa-paper-plane"></i> Contact</span>
-        <h2>Get in Touch</h2>
-      </div>
-      <div class="contact-grid">
-        <div class="card reveal">
-          <h3>Let’s work together</h3>
-          <p>I’m available for internships, freelance work, and full-time roles. The fastest way to reach me is via
-            email.</p>
-          <div class="socials" style="margin-top:.6rem">
-            <a href="mailto:vinayakgoyal2208@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://github.com/VinayakGoyal2208" target="_blank" rel="noopener" aria-label="GitHub"><i
-                class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/vinayak-goyal-888814221/" target="_blank" rel="noopener"
-              aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <div class="section-inner">
+      <div class="contact-wrapper">
+        <div class="contact-left reveal-up">
+          <div class="section-eyebrow">05 — Contact</div>
+          <h2 class="contact-heading">Let's Build<br /><em>Something Great</em></h2>
+          <p class="contact-sub">Open for Web Developer roles, frontend contracts, and fullstack engineering opportunities. Drop me a message and I'll get back within 24 hours.</p>
+
+          <div class="contact-channels">
+            <a href="mailto:vinayakgoyal2208@gmail.com" class="ch-link">
+              <span class="ch-icon">✉</span>
+              <span>vinayakgoyal2208@gmail.com</span>
+            </a>
+            <a href="https://github.com/VinayakGoyal2208" target="_blank" rel="noopener" class="ch-link">
+              <span class="ch-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </span>
+              <span>@VinayakGoyal2208</span>
+            </a>
+            <a href="https://www.linkedin.com/in/vinayak-goyal-888814221/" target="_blank" rel="noopener" class="ch-link">
+              <span class="ch-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.72a1.49 1.49 0 1 0 0 2.97 1.49 1.49 0 0 0 0-2.97z"/></svg>
+              </span>
+              <span>Vinayak Goyal</span>
+            </a>
+            <div class="ch-link static">
+              <span class="ch-icon">⊕</span>
+              <span>India · Open to Remote Worldwide</span>
+            </div>
           </div>
         </div>
-        <div class="card reveal" style="transition-delay:.06s">
-          <form id="contactForm">
-            <div style="display:grid;gap:.6rem;grid-template-columns:1fr 1fr">
-              <input required name="name" placeholder="Your name" />
-              <input required name="email" type="email" placeholder="Your email" />
+
+        <div class="contact-right reveal-scale" style="--delay:0.15s">
+          <form id="contact-form">
+            <div class="fgroup">
+              <input type="text" id="f-name" placeholder=" " required autocomplete="off" />
+              <label for="f-name">Your Name</label>
             </div>
-            <input name="subject" placeholder="Subject" />
-            <textarea required name="message" rows="5" placeholder="Your message"></textarea>
-            <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+            <div class="fgroup">
+              <input type="email" id="f-email" placeholder=" " required autocomplete="off" />
+              <label for="f-email">Your Email</label>
+            </div>
+            <div class="fgroup">
+              <textarea id="f-msg" rows="5" placeholder=" " required></textarea>
+              <label for="f-msg">Your Message</label>
+            </div>
+            <button type="submit" class="btn-main">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <div class="form-msg" id="form-msg"></div>
           </form>
-          <p id="mailtoHint" class="mailto-hint">This opens your email app with a pre-filled message.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Vinayak Goyal. All rights reserved.</span>
+    <div class="footer-inner">
+      <div class="footer-brand">VG<span>.</span></div>
+      <p>© 2026 Vinayak Goyal — Crafted with passion, precision & clean code.</p>
+      <a href="#hero" class="back-top">
+        Back to top
+        <svg viewBox="0 0 24 24" width="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
     </div>
   </footer>
 
-  <script src="js/scripts.js"></script>
+  <!-- GSAP + ScrollTrigger (CDN, no scroll conflicts) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
