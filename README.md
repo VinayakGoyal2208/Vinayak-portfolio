@@ -1,10 +1,10 @@
 # Vinayak Goyal — Personal Portfolio Website
 
-![Vinayak Goyal Portfolio](assets/project3.jpg)
+![Vinayak Goyal Portfolio](assets/Home.png)
 
 A high-performance, motion-first developer portfolio website built with HTML5, CSS3, JavaScript (ES6+), and GSAP + ScrollTrigger. Designed with an editorial dark aesthetic, fluid typography, interactive canvas graphics, and zero scroll desync.
 
-Live Site: [https://vinayakgoyal2208.github.io/portfolio/](https://vinayakgoyal2208.github.io/portfolio/) *(Update with your active URL)*
+Live Site: [Click Here](https://vinayakgoyal2208.github.io/Vinayak-portfolio/)
 
 ---
 
